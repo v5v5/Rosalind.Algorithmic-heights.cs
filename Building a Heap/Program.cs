@@ -10,8 +10,8 @@ namespace Rosalind.Algorithmic_heights
             Data data = new Data("Building a Heap.txt");
             //data.Print();
 
-            //BuildingAHeap(data);
-            BuildingAHeap1(data);
+            BuildingAHeap(data);
+            //BuildingAHeap1(data);
             //data.PrintVector();
             data.PrintVectorToFile();
         }
