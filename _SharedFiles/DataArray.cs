@@ -2,16 +2,16 @@
 using System.IO;
 using System.Reflection;
 
-namespace Rosalind.Algorithmic_heights
+namespace _SharedFiles
 {
-    internal class Data
+    public class DataArray
     {
         public int _count;
         public int[] _vector;
 
-        public Data(string fileName)
+        public DataArray(string fileName)
         {
-            string fileContent = StdIn.getFileContent(fileName);
+            string fileContent = getFileContent(fileName);
             string[] integerStrings = fileContent.Split(new char[] { ' ', '\t', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
             _count = int.Parse(integerStrings[0]);
@@ -20,7 +20,7 @@ namespace Rosalind.Algorithmic_heights
                 _vector[i] = int.Parse(integerStrings[i + 1]);
         }
 
-        internal void PrintVector()
+        public void PrintVector()
         {
             for (int i = 0; i < _vector.Length; i++)
             {
@@ -30,7 +30,7 @@ namespace Rosalind.Algorithmic_heights
             Console.ReadKey();
         }
 
-        internal void PrintVectorToFile()
+        public void PrintVectorToFile()
         {
             string path_exe = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
@@ -62,5 +62,15 @@ namespace Rosalind.Algorithmic_heights
             Console.WriteLine("");
             //            Console.ReadKey();
         }
+
+
+        private string getFileContent(string fileName)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            string resourceName = Path.GetDirectoryName(assembly.Location) + "\\..\\..\\..\\_Data\\" + fileName;
+            return File.ReadAllText(resourceName);
+        }
+
+
     }
 }

@@ -10,7 +10,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D-938D-40AD-BEF4-F5C54DB69247}"
 	ProjectSection(SolutionItems) = preProject
 		_Data\Building a Heap.txt = _Data\Building a Heap.txt
+		_Data\Merge Sort.txt = _Data\Merge Sort.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_SharedFiles", "_SharedFiles\_SharedFiles.csproj", "{6B1C4D89-0B05-4959-BA44-802929BC5771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +29,10 @@ Global
 		{B8A91AF8-01B6-46BC-9C7C-4531D0361498}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A91AF8-01B6-46BC-9C7C-4531D0361498}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8A91AF8-01B6-46BC-9C7C-4531D0361498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1C4D89-0B05-4959-BA44-802929BC5771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1C4D89-0B05-4959-BA44-802929BC5771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1C4D89-0B05-4959-BA44-802929BC5771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1C4D89-0B05-4959-BA44-802929BC5771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
