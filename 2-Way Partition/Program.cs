@@ -16,6 +16,7 @@ namespace _2_Way_Partition
             {
                 j = _2WayPartition(data._vector, 0, j);
             }
+            //_2WayPartition1(data._vector);
 
             //data.PrintVector();
             data.PrintVectorToFile();
@@ -39,6 +40,21 @@ namespace _2_Way_Partition
             }
             Utils.exch(a, lo, j);
             return j;
+        }
+
+        private static void _2WayPartition1(int[] a)
+        {
+            int index = -1, position = -1, aperture = a[0];
+            while (index < a.Length - 1)
+            {
+                index++;
+                if (a[index] <= aperture)
+                {
+                    Utils.exch(a, index, position + 1);
+                    position++;
+                }
+            }
+            Utils.exch(a, 0, position);
         }
     }
 }

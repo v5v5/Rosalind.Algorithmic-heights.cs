@@ -71,8 +71,8 @@ namespace Rosalind.Algorithmic_heights
 
                 return true;
 
-                c = p;
-                p = (c - 1) / 2;
+                //c = p;
+                //p = (c - 1) / 2;
             }
             return false;
         }
