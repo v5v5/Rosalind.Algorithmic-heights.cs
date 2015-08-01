@@ -46,6 +46,9 @@
     <Compile Include="..\_SharedFiles\DataArrays.cs">
       <Link>DataArrays.cs</Link>
     </Compile>
+    <Compile Include="..\_SharedFiles\Utils.cs">
+      <Link>Utils.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

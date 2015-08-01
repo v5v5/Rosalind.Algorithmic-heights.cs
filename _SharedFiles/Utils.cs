@@ -29,8 +29,30 @@ namespace _SharedFiles
         {
             for (int i = 0; i < a.Length; i++)
             {
+                if (i != 0)
+                {
+                    Console.Write(" ");
+                }
                 Console.Write(a[i]);
-                Console.Write(" ");
+            }
+        }
+
+        public static void PrintArrays(int[][] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (i != 0)
+                {
+                    Console.WriteLine();
+                }
+                for (int j = 0; j < a[i].Length; j++)
+                {
+                    if (j != 0)
+                    {
+                        Console.Write(" ");
+                    }
+                    Console.Write(a[i][j]);
+                }
             }
         }
 
@@ -47,6 +69,30 @@ namespace _SharedFiles
                         writer.Write(" ");
                     }
                     writer.Write(a[i].ToString());
+                }
+            }
+        }
+
+        public static void PrintArraysToFile(int[][] a)
+        {
+            string path_exe = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            using (StreamWriter writer = new StreamWriter(path_exe + @"\out.txt"))
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (i != 0)
+                    {
+                        writer.WriteLine();
+                    }
+                    for (int j = 0; j < a[i].Length; j++)
+                    {
+                        if (j != 0)
+                        {
+                            writer.Write(" ");
+                        }
+                        writer.Write(a[i][j]);
+                    }
                 }
             }
         }
