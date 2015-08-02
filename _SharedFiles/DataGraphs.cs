@@ -4,7 +4,7 @@ using System.IO;
 
 namespace _SharedFiles
 {
-    class DataGraphs
+    public class DataGraphs
     {
         public int _count;
         public Graph[] _graphs;
@@ -75,22 +75,44 @@ namespace _SharedFiles
                 Console.WriteLine(e.Message);
             }
         }
+
+        public void Print()
+        {
+            Console.WriteLine(_count);
+            Console.WriteLine();
+
+            for (int i = 0; i < _count; i++)
+            {
+                Console.Write(_graphs[i].CountVerticles);
+                Console.Write(" ");
+                Console.WriteLine(_graphs[i].CountEdges);
+
+                for (int j = 0; j < _graphs[i].CountEdges; j++)
+                {
+                    Console.Write(_graphs[i].edges[j].v0);
+                    Console.Write(" ");
+                    Console.WriteLine(_graphs[i].edges[j].v1);
+                }
+
+                Console.WriteLine();
+            }
+        }
     }
 
-    class Graph
+    public class Graph
     {
         public int CountVerticles;
         public int CountEdges;
         public Edge[] edges;
     }
 
-    class Edge
+    public class Edge
     {
         public int v0;
         public int v1;
     }
 
-    class GraphsArrayOfList
+    public class GraphsArrayOfList
     {
         public int _count;
         public GraphArrayOfList[] _GraphsArrayOfList;
@@ -167,10 +189,37 @@ namespace _SharedFiles
             }
         }
 
+        public void Print()
+        {
+            Console.WriteLine(_count);
+            Console.WriteLine();
+
+            for (int i = 0; i < _GraphsArrayOfList.Length; i++)
+            {
+
+                for (int j = 0; j < _GraphsArrayOfList[i].Vertexes.Length; j++)
+                {
+                    Console.Write(j + 1);
+                    Console.Write(": ");
+
+                    List<int> l = _GraphsArrayOfList[i].Vertexes[j];
+
+                    foreach (int v in l)
+                    {
+                        Console.Write(v + 1);
+                        Console.Write(" ");
+                    }
+                    Console.WriteLine();
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
     }
 
     public class GraphArrayOfList
     {
         public List<int>[] Vertexes;
     }
+
 }

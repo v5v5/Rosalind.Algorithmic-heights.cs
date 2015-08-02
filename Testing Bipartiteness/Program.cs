@@ -8,7 +8,7 @@ namespace Testing_Bipartiteness
         static void Main(string[] args)
         {
             GraphsArrayOfList Graphs = new GraphsArrayOfList("Testing Bipartiteness.txt");
-            Utils.PrintGraphs(Graphs);
+            Graphs.Print();
             Console.WriteLine();
 
             int[] results = TestingBipartiteness(Graphs);
@@ -71,5 +71,6 @@ namespace Testing_Bipartiteness
             }
             return true;
         }
+
     }
 }
