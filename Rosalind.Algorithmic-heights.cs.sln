@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D
 		_Data\3SUM.txt = _Data\3SUM.txt
 		_Data\Building a Heap.txt = _Data\Building a Heap.txt
 		_Data\Merge Sort.txt = _Data\Merge Sort.txt
+		_Data\Testing Bipartiteness.txt = _Data\Testing Bipartiteness.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_SharedFiles", "_SharedFiles\_SharedFiles.csproj", "{6B1C4D89-0B05-4959-BA44-802929BC5771}"
@@ -25,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_Tmp", "Tmp\_Tmp.csproj", "{ACFB8434-954F-4F44-B2DF-78112CFF315F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2SUM", "2SUM\2SUM.csproj", "{7828EFAB-1D95-4985-B5FC-DD56C315A462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing Bipartiteness", "Testing Bipartiteness\Testing Bipartiteness.csproj", "{9E69B328-DF5D-4969-BE5A-3BEFBEFE70CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +63,10 @@ Global
 		{7828EFAB-1D95-4985-B5FC-DD56C315A462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7828EFAB-1D95-4985-B5FC-DD56C315A462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7828EFAB-1D95-4985-B5FC-DD56C315A462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E69B328-DF5D-4969-BE5A-3BEFBEFE70CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E69B328-DF5D-4969-BE5A-3BEFBEFE70CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E69B328-DF5D-4969-BE5A-3BEFBEFE70CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E69B328-DF5D-4969-BE5A-3BEFBEFE70CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
