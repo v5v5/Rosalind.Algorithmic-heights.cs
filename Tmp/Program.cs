@@ -1,29 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _Tmp
 {
     class Program
     {
+        static SortedDictionary<int, int> hash = new SortedDictionary<int, int>();
+
         static void Main(string[] args)
         {
-            Dictionary<int, List<int>> hash = new Dictionary<int, List<int>>();
+            hash.Add(1, 1);
+            hash.Add(0, 4);
+            hash.Add(7, 8);
+            hash.Add(2, 8);
+            hash.Add(5, 8);
+            Print();
 
-            hash.Add(0, new List<int>());
-            hash.Add(0, new List<int>());
+            hash.Remove(hash.Keys.First());
 
-            List<int> value;
-
-            hash.TryGetValue(0, out value);
-
-            Console.WriteLine(value);
-            Console.WriteLine(value);
+            Print();
 
             Console.ReadKey();
+        }
 
+        static void Print()
+        {
+            foreach(int key in hash.Keys)
+            {
+                Console.Write(key);
+                Console.Write(": ");
+                int v;
+                hash.TryGetValue(key, out v);
+                Console.Write(v);
+                Console.WriteLine();
+            }
+            Console.WriteLine();
         }
     }
 }
