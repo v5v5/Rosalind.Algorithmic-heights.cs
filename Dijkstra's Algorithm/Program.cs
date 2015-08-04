@@ -1,7 +1,7 @@
 ﻿using _SharedFiles;
-using PriorityQueueDemo;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Dijkstra_s_Algorithm
 {
@@ -15,19 +15,72 @@ namespace Dijkstra_s_Algorithm
 
             int[] r = DijkstraS_Algorithm(graph);
 
-            //Utils.PrintArray(r);
-            Utils.PrintArrayToFile(r);
+            Utils.PrintArray(r);
+            //Utils.PrintArrayToFile(r);
+
+            Console.WriteLine("\r\nFinish!");
             Console.ReadKey();
         }
 
         private static int[] DijkstraS_Algorithm(DataWeightedGraph graph)
         {
-            int[] dist = BFS_Dijkstra(graph, 0);
+            //int[] dist = BFS_Dijkstra(graph, 0);
+            int[] dist = BFS_Dijkstra1(graph, 0);
 
             return dist;
         }
 
         static SortedDictionary<int, int> pq = new SortedDictionary<int, int>();
+
+        private static int[] BFS_Dijkstra1(DataWeightedGraph graph, int s)
+        {
+            int[] distTo = new int[graph.Vertexes.Length];
+
+            for(int v = 0; v < graph.Vertexes.Length; v++)
+            {
+                distTo[v] = Int32.MaxValue;
+            }
+            distTo[s] = 0;
+
+            // puth in priority queue key(distance) & value(index of vertex)
+            pq.Add(distTo[s], s);
+
+            while (pq.Count != 0)
+            {
+                int v = pq[pq.Keys.First()];
+                pq.Remove(pq.Keys.First());
+
+                foreach(WeightEdge e in graph.Vertexes[v])
+                {
+                    int vFrom = v;
+                    int wTo = e.VertexTo;
+                    int distSum = distTo[v] + e.Weight;
+
+                    if (distTo[wTo] <= distSum)
+                    {
+                        continue;
+                    }
+
+                    distTo[wTo] = distSum;
+
+                    if (pq.ContainsValue(wTo))
+                    {
+                        pq[distTo[wTo]] = wTo;
+                    }
+                    else
+                    {
+                        pq.Add(distTo[wTo], wTo);
+                    }
+                }
+            }
+
+            for(int i = 0; i < distTo.Length; i++)
+            {
+                distTo[i] = (distTo[i] == Int32.MaxValue ? -1 : distTo[i]);
+            }
+
+            return distTo;
+        }
 
         private static int getMinFromDist(int[] dist, bool[] mark)
         {

@@ -49,7 +49,6 @@
     <Compile Include="..\_SharedFiles\Utils.cs">
       <Link>Utils.cs</Link>
     </Compile>
-    <Compile Include="PriorityQueue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
