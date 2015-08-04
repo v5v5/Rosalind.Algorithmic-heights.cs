@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D
 		_Data\2SUM.txt = _Data\2SUM.txt
 		_Data\3SUM.txt = _Data\3SUM.txt
 		_Data\Building a Heap.txt = _Data\Building a Heap.txt
+		_Data\Counting Inversions.txt = _Data\Counting Inversions.txt
 		_Data\Dijkstra's Algorithm.txt = _Data\Dijkstra's Algorithm.txt
 		_Data\Heap Sort.txt = _Data\Heap Sort.txt
 		_Data\Merge Sort.txt = _Data\Merge Sort.txt
@@ -37,6 +38,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraS Algorithm", "Dijkstra's Algorithm\DijkstraS Algorithm.csproj", "{4979787E-A1F4-41F0-BD1C-CD385A38BBC9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heap Sort", "Heap Sort\Heap Sort.csproj", "{91CC35EA-755C-46D9-92E2-5AE3D190DD79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counting Inversions", "Counting Inversions\Counting Inversions.csproj", "{7A557927-F073-4C3E-B135-F93306C48AFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,6 +91,10 @@ Global
 		{91CC35EA-755C-46D9-92E2-5AE3D190DD79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CC35EA-755C-46D9-92E2-5AE3D190DD79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CC35EA-755C-46D9-92E2-5AE3D190DD79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A557927-F073-4C3E-B135-F93306C48AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A557927-F073-4C3E-B135-F93306C48AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A557927-F073-4C3E-B135-F93306C48AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A557927-F073-4C3E-B135-F93306C48AFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
