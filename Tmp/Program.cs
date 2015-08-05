@@ -4,12 +4,15 @@ using System.Linq;
 
 namespace _Tmp
 {
-    class Program
+
+
+    static class Program
     {
         static SortedDictionary<int, int> hash = new SortedDictionary<int, int>();
 
         static void Main(string[] args)
         {
+
             //hash.Add(1, 1);
             //hash.Add(0, 4);
             //hash.Add(7, 8);

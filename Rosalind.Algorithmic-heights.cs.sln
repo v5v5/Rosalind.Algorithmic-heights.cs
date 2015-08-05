@@ -11,12 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D
 	ProjectSection(SolutionItems) = preProject
 		_Data\2-Way Partition.txt = _Data\2-Way Partition.txt
 		_Data\2SUM.txt = _Data\2SUM.txt
+		_Data\3-Way Partition.txt = _Data\3-Way Partition.txt
 		_Data\3SUM.txt = _Data\3SUM.txt
 		_Data\Building a Heap.txt = _Data\Building a Heap.txt
 		_Data\Counting Inversions.txt = _Data\Counting Inversions.txt
 		_Data\Dijkstra's Algorithm.txt = _Data\Dijkstra's Algorithm.txt
 		_Data\Heap Sort.txt = _Data\Heap Sort.txt
 		_Data\Merge Sort.txt = _Data\Merge Sort.txt
+		_Data\Square in a Graph.txt = _Data\Square in a Graph.txt
 		_Data\Testing Acyclicity.txt = _Data\Testing Acyclicity.txt
 		_Data\Testing Bipartiteness.txt = _Data\Testing Bipartiteness.txt
 	EndProjectSection
@@ -40,6 +42,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heap Sort", "Heap Sort\Heap Sort.csproj", "{91CC35EA-755C-46D9-92E2-5AE3D190DD79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Counting Inversions", "Counting Inversions\Counting Inversions.csproj", "{7A557927-F073-4C3E-B135-F93306C48AFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Way Partition", "3-Way Partition\3-Way Partition.csproj", "{7977555A-D0CF-4D44-A7D7-C9CC6758AEB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Square in a Graph", "Square in a Graph\Square in a Graph.csproj", "{F9044D40-EF3F-4260-87B5-6C0E11C8A416}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +101,14 @@ Global
 		{7A557927-F073-4C3E-B135-F93306C48AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A557927-F073-4C3E-B135-F93306C48AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A557927-F073-4C3E-B135-F93306C48AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7977555A-D0CF-4D44-A7D7-C9CC6758AEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7977555A-D0CF-4D44-A7D7-C9CC6758AEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7977555A-D0CF-4D44-A7D7-C9CC6758AEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7977555A-D0CF-4D44-A7D7-C9CC6758AEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9044D40-EF3F-4260-87B5-6C0E11C8A416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9044D40-EF3F-4260-87B5-6C0E11C8A416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9044D40-EF3F-4260-87B5-6C0E11C8A416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9044D40-EF3F-4260-87B5-6C0E11C8A416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

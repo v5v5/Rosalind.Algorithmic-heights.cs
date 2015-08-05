@@ -42,7 +42,7 @@ namespace _2_Way_Partition
             return j;
         }
 
-        private static void _2WayPartition1(int[] a)
+        public static void _2WayPartition1(int[] a)
         {
             int index = -1, position = -1, aperture = a[0];
             while (index < a.Length - 1)
