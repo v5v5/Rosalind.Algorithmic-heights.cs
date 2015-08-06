@@ -32,9 +32,11 @@ namespace Median
 
         private static int Selection(int[] a, int lo, int hi, int median)
         {
-            int v = a.Length / 2;
+            int v = lo + (hi - lo) / 2;
 
             int LengthV;
+
+            Utils.exch(a, 0, v);
 
             int q = _3WayPartition1(a, 0, a.Length - 1, v, out LengthV);
 
@@ -79,26 +81,24 @@ namespace Median
             }
 
             QNew = q;
-            LengthV = QNew - QOld + 1;
-            return q;
+            LengthV = QOld - QNew;
+            return q + 1;
         }
 
         public static int _2WayPartition1(int[] a, int lo, int hi, int k)
         {
-            int i = lo, j = hi + 1;
-            while (true)
+            int index = -1, position = -1, aperture = a[lo];
+            while (index < a.Length - 1)
             {
-                while (a[++i] < a[lo])
-                    if (i == hi) break;
-
-                while (a[lo] < a[--j])
-                    if (j == lo) break;
-
-                if (i >= j) break;
-                Utils.exch(a, i, j);
+                index++;
+                if (a[index] <= aperture)
+                {
+                    Utils.exch(a, index, position + 1);
+                    position++;
+                }
             }
-            Utils.exch(a, lo, j);
-            return j;
+            Utils.exch(a, 0, position);
+            return position;
         }
 
     }
