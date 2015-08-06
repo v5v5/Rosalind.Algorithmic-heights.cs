@@ -30,6 +30,7 @@ namespace Dijkstra_s_Algorithm
             return dist;
         }
 
+        // key is distance & value is list of index of vertex
         static SortedDictionary<int, List<int>> pq = new SortedDictionary<int, List<int>>();
 
         private static int[] BFS_Dijkstra1(DataWeightedGraph graph, int s)
@@ -42,7 +43,7 @@ namespace Dijkstra_s_Algorithm
             }
 
             distTo[s] = 0;
-            // puth in priority queue key(distance) & value(index of vertex)
+            // puth in priority queue key(distance) & value(list of index of vertex)
             List<int> l = new List<int>();
             l.Add(s);
             pq.Add(distTo[s], l);
