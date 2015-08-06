@@ -15,8 +15,8 @@ namespace Dijkstra_s_Algorithm
 
             int[] r = DijkstraS_Algorithm(graph);
 
-            Utils.PrintArray(r);
-            //Utils.PrintArrayToFile(r);
+            //Utils.PrintArray(r);
+            Utils.PrintArrayToFile(r);
 
             Console.WriteLine("\r\nFinish!");
             Console.ReadKey();
@@ -30,7 +30,7 @@ namespace Dijkstra_s_Algorithm
             return dist;
         }
 
-        static SortedDictionary<int, int> pq = new SortedDictionary<int, int>();
+        static SortedDictionary<int, List<int>> pq = new SortedDictionary<int, List<int>>();
 
         private static int[] BFS_Dijkstra1(DataWeightedGraph graph, int s)
         {
@@ -40,36 +40,44 @@ namespace Dijkstra_s_Algorithm
             {
                 distTo[v] = Int32.MaxValue;
             }
-            distTo[s] = 0;
 
+            distTo[s] = 0;
             // puth in priority queue key(distance) & value(index of vertex)
-            pq.Add(distTo[s], s);
+            List<int> l = new List<int>();
+            l.Add(s);
+            pq.Add(distTo[s], l);
 
             while (pq.Count != 0)
             {
-                int v = pq[pq.Keys.First()];
+                List<int> listU = pq[pq.Keys.First()];
                 pq.Remove(pq.Keys.First());
 
-                foreach(WeightEdge e in graph.Vertexes[v])
+                foreach (int u in listU)
                 {
-                    int vFrom = v;
-                    int wTo = e.VertexTo;
-                    int distSum = distTo[v] + e.Weight;
-
-                    if (distTo[wTo] <= distSum)
+                    foreach (WeightEdge e in graph.Vertexes[u])
                     {
-                        continue;
-                    }
+                        int uFrom = u;
+                        int vTo = e.VertexTo;
 
-                    distTo[wTo] = distSum;
+                        int distSum = distTo[uFrom] + e.Weight;
 
-                    if (pq.ContainsValue(wTo))
-                    {
-                        pq[distTo[wTo]] = wTo;
-                    }
-                    else
-                    {
-                        pq.Add(distTo[wTo], wTo);
+                        if (distTo[vTo] <= distSum)
+                        {
+                            continue;
+                        }
+
+                        distTo[vTo] = distSum;
+
+                        if (pq.ContainsKey(distTo[vTo]))
+                        {
+                            pq[distTo[vTo]].Add(vTo);
+                        }
+                        else
+                        {
+                            List<int> ll = new List<int>();
+                            ll.Add(vTo);
+                            pq.Add(distTo[vTo], ll);
+                        }
                     }
                 }
             }
