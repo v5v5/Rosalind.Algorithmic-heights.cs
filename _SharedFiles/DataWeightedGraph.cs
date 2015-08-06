@@ -65,7 +65,13 @@ namespace _SharedFiles
             for(int i = 0; i < Vertexes.Length; i++)
             {
                 Console.Write("{0}: ", i + 1);
-                
+
+                if (null == Vertexes[i])
+                {
+                    Console.WriteLine();
+                    continue;
+                }
+
                 foreach(WeightEdge e in Vertexes[i])
                 {
                     Console.Write("{0},{1} ", e.VertexTo + 1, e.Weight);

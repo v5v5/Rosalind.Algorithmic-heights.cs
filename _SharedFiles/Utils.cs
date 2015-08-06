@@ -25,6 +25,35 @@ namespace _SharedFiles
             return Path.GetDirectoryName(assembly.Location) + "\\..\\..\\..\\_Data\\" + fileName;
         }
 
+        public static void PrintArrayX(string[] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (i != 0)
+                {
+                    Console.Write(" ");
+                }
+                Console.Write(a[i]);
+            }
+        }
+
+        public static void PrintArrayToFileX(string[] a)
+        {
+            string path_exe = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            using (StreamWriter writer = new StreamWriter(path_exe + @"\out.txt"))
+            {
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (i != 0)
+                    {
+                        writer.Write(" ");
+                    }
+                    writer.Write(a[i].ToString());
+                }
+            }
+        }
+
         public static void Print(int a)
         {
             Console.WriteLine(a);

@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D
 		_Data\2SUM.txt = _Data\2SUM.txt
 		_Data\3-Way Partition.txt = _Data\3-Way Partition.txt
 		_Data\3SUM.txt = _Data\3SUM.txt
+		_Data\Bellman-Ford Algorithm.txt = _Data\Bellman-Ford Algorithm.txt
 		_Data\Building a Heap.txt = _Data\Building a Heap.txt
 		_Data\Counting Inversions.txt = _Data\Counting Inversions.txt
 		_Data\Dijkstra's Algorithm.txt = _Data\Dijkstra's Algorithm.txt
@@ -46,6 +47,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-Way Partition", "3-Way Partition\3-Way Partition.csproj", "{7977555A-D0CF-4D44-A7D7-C9CC6758AEB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Square in a Graph", "Square in a Graph\Square in a Graph.csproj", "{F9044D40-EF3F-4260-87B5-6C0E11C8A416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bellman-Ford Algorithm", "Bellman-Ford Algorithm\Bellman-Ford Algorithm.csproj", "{DA720463-89F2-40C2-91C5-FBEB707F2509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -109,6 +112,10 @@ Global
 		{F9044D40-EF3F-4260-87B5-6C0E11C8A416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9044D40-EF3F-4260-87B5-6C0E11C8A416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9044D40-EF3F-4260-87B5-6C0E11C8A416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA720463-89F2-40C2-91C5-FBEB707F2509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA720463-89F2-40C2-91C5-FBEB707F2509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA720463-89F2-40C2-91C5-FBEB707F2509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA720463-89F2-40C2-91C5-FBEB707F2509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
