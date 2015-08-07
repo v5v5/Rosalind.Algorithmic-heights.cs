@@ -25,40 +25,93 @@ namespace Median
 
         private static int Median0(int[] a, int median)
         {
-            int r = Selection(a, 0, a.Length - 1, median);
+            int r = Selection(a, 0, a.Length - 1, median - 1);
+            //int r = Selection1(a, 0, a.Length - 1, median);
 
             return r;
         }
 
-        private static int Selection(int[] a, int lo, int hi, int median)
+        private static int Selection1(int[] a, int lo, int hi, int kth)
         {
-            int v = lo + (hi - lo) / 2;
+            int x = lo, y = hi;
+            int j = hi, k = 0, i = hi;
+
+            while (i > x + k)
+            {
+                if (a[i] > a[x])
+                {
+                    if (i != j)
+                    {
+                        Utils.exch(a, i, j);
+                    }
+                    j--; i--;
+                }
+                else if (a[i] == a[x])
+                {
+                    k++;
+                    if (i != x + k)
+                    {
+                        Utils.exch(a, i, x + k);
+                    }
+                }
+                else
+                {
+                    i--;
+                }
+            }
+
+            // x..x+k : l
+            // x+k+1..j : < l
+            // j+1..y : > l
+            int n = Math.Min(k, j - x - k - 1);
+
+            for(int ii = 0; ii < n; ii++)
+            {
+                Utils.exch(a, x + ii, j - ii);
+            }
+            // x..j-k-1 : < l
+            // j-k..j : l
+            // j+1..y : > l
+            if ((kth >= j - k) && (kth <= j))
+            {
+                return a[kth];
+            }
+            else if (kth < j - k)
+            {
+                return Selection1(a, x, j - k - 1, kth);
+            }
+            else
+            {
+                return Selection1(a, j + 1, y, kth);
+            }
+        }
+
+        private static int Selection(int[] a, int lo, int hi, int k)
+        {
+            int v = a[k]; // a[lo + (hi - lo) / 2];
 
             int LengthV;
 
-            Utils.exch(a, 0, v);
+            Utils.exch(a, lo, k);
 
-            int q = _3WayPartition1(a, 0, a.Length - 1, v, out LengthV);
+            int LengthL = _3WayPartition1(a, lo, hi, out LengthV);
 
-            int LengthL = q;
-
-            if (v <= LengthL)
+            if (k < LengthL)
             {
-                return Selection(a, 0, q - 1, median);
+                return Selection(a, lo, LengthL - 1, k);
             }
-            else if (v > LengthL + LengthV)
+            else if (k > LengthL + LengthV - 1)
             {
-                return Selection(a, LengthL + LengthV, a.Length - 1, median);
+                return Selection(a, LengthL + LengthV, hi, k);
             }
             return v;
         }
 
-        public static int _3WayPartition1(int[] a, int lo, int hi, int k, out int LengthV)
+        public static int _3WayPartition1(int[] a, int lo, int hi, out int LengthV)
         {
-            int QOld, QNew;
+            int q = _2WayPartition1(a, lo, hi);
 
-            int q = _2WayPartition1(a, lo, hi, k);
-            QOld = q;
+            LengthV = 1;
 
             int pivot = a[q];
             q--;
@@ -77,18 +130,17 @@ namespace Median
                 else
                 {
                     q--;
+                    LengthV++;
                 }
             }
 
-            QNew = q;
-            LengthV = QOld - QNew;
             return q + 1;
         }
 
-        public static int _2WayPartition1(int[] a, int lo, int hi, int k)
+        public static int _2WayPartition1(int[] a, int lo, int hi)
         {
             int index = -1, position = -1, aperture = a[lo];
-            while (index < a.Length - 1)
+            while (index < hi)
             {
                 index++;
                 if (a[index] <= aperture)
@@ -97,7 +149,7 @@ namespace Median
                     position++;
                 }
             }
-            Utils.exch(a, 0, position);
+            Utils.exch(a, lo, position);
             return position;
         }
 
