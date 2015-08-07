@@ -47,10 +47,10 @@ namespace _SharedFiles
                             countEdges = int.Parse(args[1]);
 
                             _GraphsWeithedAdj[iGraph] = new GraphWeithedAdj();
-                            _GraphsWeithedAdj[iGraph].Vertexes = new List<WeightEdge>[countVerticles];
+                            _GraphsWeithedAdj[iGraph].Vertexes = new List<WeightEdge0>[countVerticles];
                             for (int i = 0; i < _GraphsWeithedAdj[iGraph].Vertexes.Length; i++)
                             {
-                                _GraphsWeithedAdj[iGraph].Vertexes[i] = new List<WeightEdge>();
+                                _GraphsWeithedAdj[iGraph].Vertexes[i] = new List<WeightEdge0>();
                             }
                             continue;
                         }
@@ -67,7 +67,7 @@ namespace _SharedFiles
                         }
 
                         _GraphsWeithedAdj[iGraph].Vertexes[v0 - 1].Add(
-                            new WeightEdge() { VertexTo = v1 - 1, Weight = w });
+                            new WeightEdge0() { VertexTo = v1 - 1, Weight = w });
 
                         countEdges--;
                         iEdge++;
@@ -94,7 +94,7 @@ namespace _SharedFiles
                 {
                     Console.Write(iVertixes + ": ");
 
-                    foreach (WeightEdge edge in _GraphsWeithedAdj[iGraph].Vertexes[iVertixes])
+                    foreach (WeightEdge0 edge in _GraphsWeithedAdj[iGraph].Vertexes[iVertixes])
                     {
                         Console.Write("{0},{1}", edge.VertexTo, edge.Weight);
                         Console.Write(" ");
@@ -113,10 +113,10 @@ namespace _SharedFiles
         public int start;
         public int finish;
         public int weight;
-        public List<WeightEdge>[] Vertexes;
+        public List<WeightEdge0>[] Vertexes;
     }
 
-    public class WeightEdge
+    public class WeightEdge0
     {
         public int VertexTo;
         public int Weight;

@@ -69,7 +69,7 @@ namespace Shortest_Cycle_Through_a_Given_Edge
 
                 foreach (int u in listU)
                 {
-                    foreach (WeightEdge e in graph.Vertexes[u])
+                    foreach (WeightEdge0 e in graph.Vertexes[u])
                     {
                         int uFrom = u;
                         int vTo = e.VertexTo;

@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace _SharedFiles
 {
-    class DataDirectedGraphs
+    class DataDirectedGraph
     {
-        public int _count;
-        public GraphArrayOfList[] _GraphsArrayOfList;
+        public int CountVertexes;
+        public int CountEdges;
+        public GraphAdj Graph;
 
-        public DataDirectedGraphs(string fileName)
+        public DataDirectedGraph(string fileName)
         {
             string filePath = Utils.GetFullFilePath(fileName);
 
@@ -18,57 +22,33 @@ namespace _SharedFiles
                 using (StreamReader reader = new StreamReader(filePath))
                 {
                     string line;
-                    int iLine = 0;
-                    int iGraph = -1;
-                    int iEdge = 0;
-                    bool curLineIsGraphArgs = false;
+
+                    line = reader.ReadLine();
+
+                    string[] param = line.Split(' ');
+
+                    CountVertexes = int.Parse(param[0]);
+                    CountEdges = int.Parse(param[1]);
+
+                    Graph = new GraphAdj();
+                    Graph.Vertexes = new List<int>[CountVertexes];
 
                     while ((line = reader.ReadLine()) != null)
                     {
-                        switch (iLine)
+                        param = line.Split(' ');
+
+                        int v0 = Int32.Parse(param[0]) - 1;
+                        int v1 = Int32.Parse(param[1]) - 1;
+
+                        if (null == Graph.Vertexes[v0])
                         {
-                            case 0:
-                                _count = int.Parse(line);
-                                _GraphsArrayOfList = new GraphArrayOfList[_count];
-                                break;
-                            default:
-                                if (line == "")
-                                {
-                                    iGraph++;
-                                    curLineIsGraphArgs = true;
-                                    break;
-                                }
-
-                                if (curLineIsGraphArgs)
-                                {
-                                    curLineIsGraphArgs = false;
-                                    string[] args = line.Split(' ');
-                                    int countVerticles = int.Parse(args[0]);
-                                    int countEdges = int.Parse(args[1]);
-
-                                    _GraphsArrayOfList[iGraph] = new GraphArrayOfList();
-                                    _GraphsArrayOfList[iGraph].Vertexes = new List<int>[countVerticles];
-                                    for (int i = 0; i < _GraphsArrayOfList[iGraph].Vertexes.Length; i++)
-                                    {
-                                        _GraphsArrayOfList[iGraph].Vertexes[i] = new List<int>();
-                                    }
-
-                                    iEdge = 0;
-                                }
-                                else
-                                {
-                                    string[] edge = line.Split(' ');
-                                    int v0 = int.Parse(edge[0]);
-                                    int v1 = int.Parse(edge[1]);
-
-                                    _GraphsArrayOfList[iGraph].Vertexes[v0 - 1].Add(v1 - 1);
-
-                                    iEdge++;
-                                }
-
-                                break;
+                            Graph.Vertexes[v0] = new List<int>();
                         }
-                        iLine++;
+                        if (null == Graph.Vertexes[v1])
+                        {
+                            Graph.Vertexes[v1] = new List<int>();
+                        }
+                        Graph.Vertexes[v0].Add(v1);
                     }
                 }
             }
@@ -77,34 +57,35 @@ namespace _SharedFiles
                 Console.WriteLine("The file could not be read:");
                 Console.WriteLine(e.Message);
             }
+
         }
 
-        public void Print()
+        internal void Print()
         {
-            Console.WriteLine(_count);
+            Console.Write("{0} {1}", CountVertexes, CountEdges);
             Console.WriteLine();
 
-            for(int iGraph = 0; iGraph < _GraphsArrayOfList.Length; iGraph++)
+            for (int i = 0; i < Graph.Vertexes.Length; i++)
             {
-                for (int iVertixes = 0; iVertixes < _GraphsArrayOfList[iGraph].Vertexes.Length; iVertixes++)
-                {
-                    Console.Write(iVertixes + ": ");
+                Console.Write("{0}: ", i);
 
-                    foreach (int edge in _GraphsArrayOfList[iGraph].Vertexes[iVertixes])
-                    {
-                        Console.Write(edge);
-                        Console.Write(" ");
-                    }
+                if (null == Graph.Vertexes[i])
+                {
                     Console.WriteLine();
+                    continue;
+                }
+
+                foreach(int e in Graph.Vertexes[i])
+                {
+                    Console.Write("{0} ", e);
                 }
                 Console.WriteLine();
             }
         }
 
-        public class GraphArrayOfList
+        public class GraphAdj
         {
             public List<int>[] Vertexes;
         }
-
     }
 }

@@ -26,19 +26,23 @@ namespace Partial_Sort
 
         private static int[] Partial_Sort(int[] a, int param)
         {
-            QuickSort(a, 0, a.Length - 1);
+            QuickSort(a, 0, a.Length - 1, param);
 
             int[] dest = new int[param];
             Array.Copy(a, dest, param);
             return dest;
         }
 
-        private static void QuickSort(int[] a, int lo, int hi)
+        private static void QuickSort(int[] a, int lo, int hi, int param)
         {
             if (hi <= lo) return;
             int j = Partition(a, lo, hi);
-            QuickSort(a, lo, j - 1);
-            QuickSort(a, j + 1, hi);
+            QuickSort(a, lo, j - 1, param);
+            if (j > param) // may be >=
+            {
+                return;
+            }
+            QuickSort(a, j + 1, hi, param);
         }
 
         private static int Partition(int[] a, int lo, int hi)
