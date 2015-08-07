@@ -119,6 +119,10 @@ namespace _SharedFiles
                     {
                         writer.WriteLine();
                     }
+                    if (null == a[i])
+                    {
+                        continue;
+                    }
                     for (int j = 0; j < a[i].Length; j++)
                     {
                         if (j != 0)

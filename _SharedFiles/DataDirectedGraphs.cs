@@ -58,10 +58,10 @@ namespace _SharedFiles
                                 else
                                 {
                                     string[] edge = line.Split(' ');
-                                    int v0 = int.Parse(edge[0]);
-                                    int v1 = int.Parse(edge[1]);
+                                    int v0 = int.Parse(edge[0]) - 1;
+                                    int v1 = int.Parse(edge[1]) - 1;
 
-                                    _GraphsArrayOfList[iGraph].Vertexes[v0 - 1].Add(v1 - 1);
+                                    _GraphsArrayOfList[iGraph].Vertexes[v0].Add(v1);
 
                                     iEdge++;
                                 }

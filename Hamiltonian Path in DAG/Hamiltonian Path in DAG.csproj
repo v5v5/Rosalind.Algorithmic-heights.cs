@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\_SharedFiles\DataDirectedGraphs.cs">
-      <Link>DataDirectedGraphs.cs</Link>
+    <Compile Include="..\_SharedFiles\DataDirectedGraphsAlt0.cs">
+      <Link>DataDirectedGraphsAlt0.cs</Link>
     </Compile>
     <Compile Include="..\_SharedFiles\Utils.cs">
       <Link>Utils.cs</Link>

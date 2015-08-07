@@ -44,6 +44,7 @@
     <Compile Include="DataArrays.cs" />
     <Compile Include="DataDirectedGraph.cs" />
     <Compile Include="DataDirectedGraphs.cs" />
+    <Compile Include="DataDirectedGraphsAlt0.cs" />
     <Compile Include="DataGraphs.cs" />
     <Compile Include="DataMedian.cs" />
     <Compile Include="DataWeightedGraph.cs" />

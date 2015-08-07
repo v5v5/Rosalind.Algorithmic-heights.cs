@@ -12,15 +12,16 @@ namespace Shortest_Cycle_Through_a_Given_Edge
         static void Main(string[] args)
         {
             DataWeightedGraphs graphs = new DataWeightedGraphs("Shortest Cycle Through a Given Edge.txt");
-            //graphs.Print();
-            //Console.WriteLine("Finish");
-            //Console.ReadKey();
-
+            graphs.Print();
+            Console.WriteLine("Finish");
+            Console.ReadKey();
+/*
             int[] r = ShortestCycleThroughAGivenEdge(graphs);
             Utils.PrintArrayToFile(r);
             Console.WriteLine();
             Console.WriteLine("Finish");
             Console.ReadKey();
+*/
         }
 
         private static int[] ShortestCycleThroughAGivenEdge(DataWeightedGraphs graphs)
