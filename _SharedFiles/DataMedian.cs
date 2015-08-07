@@ -10,7 +10,7 @@ namespace _SharedFiles
     {
         public int count;
         public int[] a;
-        public int median;
+        public int param;
 
         public DataMedian(string fileName)
         {
@@ -22,7 +22,7 @@ namespace _SharedFiles
             for (int i = 0; i < a.Length; i++)
                 a[i] = int.Parse(integerStrings[i + 1]);
 
-            median = int.Parse(integerStrings[integerStrings.Length - 1]);
+            param = int.Parse(integerStrings[integerStrings.Length - 1]);
         }
 
         public void Print()
@@ -33,7 +33,7 @@ namespace _SharedFiles
                 Console.Write(a[i] + " ");
             }
             Console.WriteLine();
-            Console.WriteLine(median);
+            Console.WriteLine(param);
         }
     }
 }

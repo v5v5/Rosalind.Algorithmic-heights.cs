@@ -16,16 +16,16 @@ namespace Median
             //Console.WriteLine("Finish!");
             //Console.ReadKey();
 
-            int m = Median0(data.a, data.median);
+            int m = Median0(data.a, data.param - 1);
 
             Console.WriteLine(m);
             Console.WriteLine("Finish!");
             Console.ReadKey();
         }
 
-        private static int Median0(int[] a, int median)
+        private static int Median0(int[] a, int param)
         {
-            int r = Selection(a, 0, a.Length - 1, median - 1);
+            int r = Selection(a, 0, a.Length - 1, param);
             //int r = Selection1(a, 0, a.Length - 1, median);
 
             return r;

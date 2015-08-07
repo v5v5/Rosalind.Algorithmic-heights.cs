@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D
 		_Data\Heap Sort.txt = _Data\Heap Sort.txt
 		_Data\Median.txt = _Data\Median.txt
 		_Data\Merge Sort.txt = _Data\Merge Sort.txt
+		_Data\Partial Sort.txt = _Data\Partial Sort.txt
 		_Data\Shortest Cycle Through a Given Edge.txt = _Data\Shortest Cycle Through a Given Edge.txt
 		_Data\Square in a Graph.txt = _Data\Square in a Graph.txt
 		_Data\Testing Acyclicity.txt = _Data\Testing Acyclicity.txt
@@ -55,6 +56,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shortest Cycle Through a Given Edge", "Shortest Cycle Through a Given Edge\Shortest Cycle Through a Given Edge.csproj", "{FD40FBC6-FEDC-462B-A135-8631D17287D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Median", "Median\Median.csproj", "{C3FC7D1E-48C6-454C-9F9C-D5B7D337EB12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partial Sort", "Partial Sort\Partial Sort.csproj", "{6F819DF3-70E7-4878-AC47-8B0771FD9ECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -130,6 +133,10 @@ Global
 		{C3FC7D1E-48C6-454C-9F9C-D5B7D337EB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3FC7D1E-48C6-454C-9F9C-D5B7D337EB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3FC7D1E-48C6-454C-9F9C-D5B7D337EB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F819DF3-70E7-4878-AC47-8B0771FD9ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F819DF3-70E7-4878-AC47-8B0771FD9ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F819DF3-70E7-4878-AC47-8B0771FD9ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F819DF3-70E7-4878-AC47-8B0771FD9ECB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
