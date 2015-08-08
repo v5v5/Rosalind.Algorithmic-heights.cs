@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace _SharedFiles
 {
-    class DataDirectedGraphsAlt0
+    class GraphWeithedAdjAlt0
     {
         public int Count;
-        public GraphAdjAlt0[] Graphs;
+        public GraphAdjAlt1[] Graphs;
 
-        public DataDirectedGraphsAlt0(string fileName)
+        public GraphWeithedAdjAlt0(string fileName)
         {
             string filePath = Utils.GetFullFilePath(fileName);
 
@@ -29,7 +29,7 @@ namespace _SharedFiles
 
                     line = reader.ReadLine();
                     Count = int.Parse(line);
-                    Graphs = new GraphAdjAlt0[Count];
+                    Graphs = new GraphAdjAlt1[Count];
 
                     while ((line = reader.ReadLine()) != null)
                     {
@@ -45,11 +45,11 @@ namespace _SharedFiles
                             countVerticles = int.Parse(args[0]);
                             countEdges = int.Parse(args[1]);
 
-                            Graphs[iGraph] = new GraphAdjAlt0();
-                            Graphs[iGraph].v = new List<int>[countVerticles];
+                            Graphs[iGraph] = new GraphAdjAlt1();
+                            Graphs[iGraph].v = new List<WeightEdge1>[countVerticles];
                             for (int i = 0; i < Graphs[iGraph].v.Length; i++)
                             {
-                                Graphs[iGraph].v[i] = new List<int>();
+                                Graphs[iGraph].v[i] = new List<WeightEdge1>();
                             }
                             continue;
                         }
@@ -57,8 +57,9 @@ namespace _SharedFiles
                         string[] edge = line.Split(' ');
                         int v0 = int.Parse(edge[0]) - 1;
                         int v1 = int.Parse(edge[1]) - 1;
+                        int w = int.Parse(edge[2]);
 
-                        Graphs[iGraph].v[v0].Add(v1);
+                        Graphs[iGraph].v[v0].Add(new WeightEdge1() { VertexTo = v1, Weight = w});
 
                         countEdges--;
                     }
@@ -86,15 +87,13 @@ namespace _SharedFiles
 
                     for (int v = 0; v < Graphs[i].v.Length; v++)
                     {
-                        foreach (int u in Graphs[i].v[v])
+                        foreach (WeightEdge1 e in Graphs[i].v[v])
                         {
-                            writer.WriteLine("{0} {1}", v, u);
+                            writer.WriteLine("{0} {1} {2}", v, e.VertexTo, e.Weight);
                         }
                     }
                 }
-
             }
-
         }
 
         public void Print()
@@ -107,18 +106,27 @@ namespace _SharedFiles
 
                 for (int v = 0; v < Graphs[i].v.Length; v++)
                 {
-                    foreach (int u in Graphs[i].v[v])
+                    foreach (WeightEdge1 e in Graphs[i].v[v])
                     {
-                        Console.WriteLine("{0} {1}", v, u);
+                        Console.WriteLine("{0} {1} {2}", v, e.VertexTo, e.Weight);
                     }
                 }
                 Console.WriteLine();
             }
         }
+
     }
 
-    class GraphAdjAlt0
+    class GraphAdjAlt1
     {
-        public List<int>[] v;
+        public List<WeightEdge1>[] v;
     }
+
+    public class WeightEdge1
+    {
+        public int VertexTo;
+        public int Weight;
+    }
+
+
 }

@@ -21,6 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D
 		_Data\Heap Sort.txt = _Data\Heap Sort.txt
 		_Data\Median.txt = _Data\Median.txt
 		_Data\Merge Sort.txt = _Data\Merge Sort.txt
+		_Data\Negative Weight Cycle.txt = _Data\Negative Weight Cycle.txt
 		_Data\Partial Sort.txt = _Data\Partial Sort.txt
 		_Data\Shortest Cycle Through a Given Edge.txt = _Data\Shortest Cycle Through a Given Edge.txt
 		_Data\Square in a Graph.txt = _Data\Square in a Graph.txt
@@ -64,6 +65,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topological Sorting", "Topological Sorting\Topological Sorting.csproj", "{D3C80B58-9A39-4FA9-A01F-B9CDB62EF3C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamiltonian Path in DAG", "Hamiltonian Path in DAG\Hamiltonian Path in DAG.csproj", "{EAAD943F-3FA3-4615-82C6-8B62300C465A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negative Weight Cycle", "Negative Weight Cycle\Negative Weight Cycle.csproj", "{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +154,10 @@ Global
 		{EAAD943F-3FA3-4615-82C6-8B62300C465A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAAD943F-3FA3-4615-82C6-8B62300C465A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAAD943F-3FA3-4615-82C6-8B62300C465A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
