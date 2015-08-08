@@ -37,9 +37,12 @@ namespace Hamiltonian_Path_in_DAG
         {
             int[] r = TopologicalSorting(g);
 
-            for(int i = 1; i < r.Length; i++)
+            // next vertix (with index i + 1) must finding in
+            // list of previous vertix (with index i), becouse must be edge
+            // beetween them 
+            for(int i = 0; i < r.Length - 1; i++)
             {
-                if (r[i - 1] + 1 != r[i])
+                if (g.v[r[i] - 1].IndexOf(r[i + 1] - 1) == -1)
                 {
                     return new int[] { -1 };
                 }
@@ -89,7 +92,7 @@ namespace Hamiltonian_Path_in_DAG
             {
                 foreach (int i in g.v[v])
                 {
-                    if (marked[v] != 0)
+                    if (marked[i] != 0)
                     {
                         continue;
                     }
