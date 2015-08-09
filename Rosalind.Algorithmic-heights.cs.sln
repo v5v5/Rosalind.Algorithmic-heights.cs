@@ -23,8 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D
 		_Data\Merge Sort.txt = _Data\Merge Sort.txt
 		_Data\Negative Weight Cycle.txt = _Data\Negative Weight Cycle.txt
 		_Data\Partial Sort.txt = _Data\Partial Sort.txt
+		_Data\Quick Sort.txt = _Data\Quick Sort.txt
 		_Data\Shortest Cycle Through a Given Edge.txt = _Data\Shortest Cycle Through a Given Edge.txt
 		_Data\Square in a Graph.txt = _Data\Square in a Graph.txt
+		_Data\Strongly Connected Components.txt = _Data\Strongly Connected Components.txt
 		_Data\Testing Acyclicity.txt = _Data\Testing Acyclicity.txt
 		_Data\Testing Bipartiteness.txt = _Data\Testing Bipartiteness.txt
 		_Data\Topological Sorting.txt = _Data\Topological Sorting.txt
@@ -67,6 +69,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamiltonian Path in DAG", "Hamiltonian Path in DAG\Hamiltonian Path in DAG.csproj", "{EAAD943F-3FA3-4615-82C6-8B62300C465A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negative Weight Cycle", "Negative Weight Cycle\Negative Weight Cycle.csproj", "{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick Sort", "Quick Sort\Quick Sort.csproj", "{E2A4B2D0-CDE2-4BF4-ADBB-6460F542B3F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strongly Connected Components", "Strongly Connected Components\Strongly Connected Components.csproj", "{F9397020-258E-4722-AA42-5CA9A78C3539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,6 +164,14 @@ Global
 		{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EFE596B-1FFF-432E-846A-CFFD26F5ACC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A4B2D0-CDE2-4BF4-ADBB-6460F542B3F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A4B2D0-CDE2-4BF4-ADBB-6460F542B3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A4B2D0-CDE2-4BF4-ADBB-6460F542B3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A4B2D0-CDE2-4BF4-ADBB-6460F542B3F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9397020-258E-4722-AA42-5CA9A78C3539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9397020-258E-4722-AA42-5CA9A78C3539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9397020-258E-4722-AA42-5CA9A78C3539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9397020-258E-4722-AA42-5CA9A78C3539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,6 +13,8 @@ namespace _SharedFiles
         public int CountEdges;
         public GraphAdj Graph;
 
+        public DataDirectedGraph() { }
+
         public DataDirectedGraph(string fileName)
         {
             string filePath = Utils.GetFullFilePath(fileName);
@@ -60,6 +62,36 @@ namespace _SharedFiles
 
         }
 
+        public DataDirectedGraph CreateReverse()
+        {
+            int n = Graph.Vertexes.Length;
+
+            DataDirectedGraph r = new DataDirectedGraph();
+            r.CountVertexes = n;
+
+            r.Graph = new GraphAdj();
+            r.Graph.Vertexes = new List<int>[n];
+            for(int i = 0; i < n; i++)
+            {
+                r.Graph.Vertexes[i] = new List<int>();
+            }
+                 
+            for (int v = 0; v < n; v++)
+            {
+                if (Graph.Vertexes[v] == null)
+                {
+                    continue;
+                }
+                foreach (int w in Graph.Vertexes[v])
+                {
+                    r.Graph.Vertexes[w].Add(v);
+                    r.CountEdges++;
+                }
+            }
+
+            return r;
+        }
+
         internal void Print()
         {
             Console.Write("{0} {1}", CountVertexes, CountEdges);
@@ -83,9 +115,10 @@ namespace _SharedFiles
             }
         }
 
-        public class GraphAdj
-        {
-            public List<int>[] Vertexes;
-        }
+    }
+
+    public class GraphAdj
+    {
+        public List<int>[] Vertexes;
     }
 }
