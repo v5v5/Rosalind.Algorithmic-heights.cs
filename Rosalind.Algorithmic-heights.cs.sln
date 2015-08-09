@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merge Sort", "Merge Sort\Me
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Data", "_Data", "{8501C28D-938D-40AD-BEF4-F5C54DB69247}"
 	ProjectSection(SolutionItems) = preProject
+		_Data\2-Satisfiability.txt = _Data\2-Satisfiability.txt
 		_Data\2-Way Partition.txt = _Data\2-Way Partition.txt
 		_Data\2SUM.txt = _Data\2SUM.txt
 		_Data\3-Way Partition.txt = _Data\3-Way Partition.txt
@@ -73,6 +74,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quick Sort", "Quick Sort\Quick Sort.csproj", "{E2A4B2D0-CDE2-4BF4-ADBB-6460F542B3F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strongly Connected Components", "Strongly Connected Components\Strongly Connected Components.csproj", "{F9397020-258E-4722-AA42-5CA9A78C3539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-Satisfiability", "2-Satisfiability\2-Satisfiability.csproj", "{807261A4-5602-43E5-836E-8A4A8798AE1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -172,6 +175,10 @@ Global
 		{F9397020-258E-4722-AA42-5CA9A78C3539}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9397020-258E-4722-AA42-5CA9A78C3539}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9397020-258E-4722-AA42-5CA9A78C3539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807261A4-5602-43E5-836E-8A4A8798AE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807261A4-5602-43E5-836E-8A4A8798AE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807261A4-5602-43E5-836E-8A4A8798AE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807261A4-5602-43E5-836E-8A4A8798AE1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
