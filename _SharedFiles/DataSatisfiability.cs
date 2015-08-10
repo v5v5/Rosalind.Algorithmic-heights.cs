@@ -56,7 +56,7 @@ namespace _SharedFiles
 
                         int e0out, e0in, e1out, e1in;
                         if (v0 > 0)
-                        {//+
+                        {
                             e1in = v0 * 2 - 2;
                             e0out = e1in + 1;
                         }

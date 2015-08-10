@@ -135,5 +135,32 @@ namespace _SharedFiles
             }
         }
 
+
+        public static List<int>[] CreateReverseGraph(List<int>[] g)
+        {
+            int n = g.Length;
+
+            List<int>[] r = new List<int>[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                r[i] = new List<int>();
+            }
+
+            for (int v = 0; v < n; v++)
+            {
+                if (g[v] == null)
+                {
+                    continue;
+                }
+                foreach (int w in g[v])
+                {
+                    r[w].Add(v);
+                }
+            }
+
+            return r;
+        }
+
     }
 }
